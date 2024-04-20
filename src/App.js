@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Title from "./components/Title";
+import CustomInstance from "./examples/custom-instance";
+import FirstRequest from "./examples/first-request";
+import GlobalInstance from "./examples/global-instance";
+import Headers from "./examples/headers";
+import PostRequest from "./examples/post-request";
+import "./axios/global";
+import Interceptors from "./examples/interceptor";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Title />
+      <FirstRequest />
+      <hr />
+      <Headers />
+      <hr />
+      <PostRequest />
+      <hr />
+      <GlobalInstance />
+      <hr />
+      <CustomInstance />
+      <hr />
+      <Interceptors />
+    </main>
   );
 }
 
